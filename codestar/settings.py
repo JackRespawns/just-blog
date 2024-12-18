@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = 'django-insecure-7)a+zm)w^fo9$78kf6dj-)1mz^oef%98=67h-(78ws-)v8!xwy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['http://127.0.0.1:8000/', '127.0.0.1', 'localhost']
 
@@ -69,7 +68,6 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = 'codestar.wsgi.application'
 
 
@@ -82,13 +80,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeinstitute-ide.net/",
-    "https://*.herokuapp.com",
-    "https://*.127.0.0.1",
-    "https://*.localhost",
-]
 
 
 # Password validation
